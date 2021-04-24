@@ -1,5 +1,5 @@
 .playerContainer {
-    width: 26.5rem;
+    width: 25rem;
     height: 100vh;
     padding: 5rem 4rem;
 
@@ -39,7 +39,7 @@
     border-radius: 1.5rem;
     background: linear-gradient(143.8deg, rgba(145, 100, 250, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
 
-    padding: 4rem;
+    padding: 3.5rem;
     text-align: center;
 
     display: flex;
@@ -91,5 +91,24 @@
             border-radius: 1rem;
             background-color: var(--purple-400);
         }
+    }
+}
+
+.togglePlayer {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--purple-400);
+    border: 1px solid var(--purple-300);
+    color: var(--white);
+    border-radius: 0.5rem;
+    font-size: 18;
+    transition: filter 0.2s;
+    top: 0;
+    right: 0;
+    margin: 15px;
+
+    &:hover {
+        filter: brightness(0.97);
     }
 }
