@@ -1,8 +1,16 @@
 import styles from "./styles.module.scss"
 
 export default function Player() {
+
     return (
+        <>
+        
+        <button className={styles.togglePlayer}>
+            &gt;
+        </button>
+
         <div className={styles.playerContainer}>
+
             <header>
                 <img src="/playing.svg" alt="Tocando agora"/>
                 <strong>Tocando agora</strong>
@@ -40,5 +48,6 @@ export default function Player() {
                 </div>
             </footer>
         </div>
+        </>
     )
 }
