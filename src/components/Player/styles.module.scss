@@ -1,7 +1,11 @@
+.playerContainerClosed {
+    display: none;
+}
+
 .playerContainer {
     width: 25rem;
     height: 100vh;
-    padding: 5rem 4rem;
+    padding: 4rem 3rem;
 
     background-color: var(--purple-500);
     color: var(--white);
@@ -29,6 +33,28 @@
         &.empty {
             opacity: 0.5;
         }
+    }
+}
+
+.currentEpisode {
+    text-align: center;
+
+    img {
+        border-radius: 1.5rem;
+    }
+
+    strong {
+        display: block;
+        margin-top: 2rem;
+        font: 600 1.25rem Lexend, sans-serif;
+        line-height: 1.75rem;
+    }
+
+    span {
+        display: block;
+        margin-top: 1rem;
+        opacity: 0.6;
+        line-height: 1.5rem;
     }
 }
 
@@ -84,12 +110,25 @@
         background-color: transparent;
         border: 0;
         font-size: 0;
+        transition: filter 0.2s;
+
+        &:disabled {
+            cursor: not-allowed;
+        }
+
+        &:hover:not(:disabled) {
+            filter: brightness(0.7);
+        }
 
         &.playButton {
             width: 4rem;
             height: 4rem;
             border-radius: 1rem;
             background-color: var(--purple-400);
+
+            &:hover:not(:disabled) {
+                filter: brightness(0.95);
+            }
         }
     }
 }
